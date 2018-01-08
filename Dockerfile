@@ -17,7 +17,7 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E03280
 
 RUN echo "deb http://download.mono-project.com/repo/ubuntu xenial main" | tee /etc/apt/sources.list.d/mono-official.list \
   && apt-get update \
-  && apt-get install -y mono-runtime 
+  && apt-get install -y mono-runtime mono-devel
 
 #install mono for sonarqube
 RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
