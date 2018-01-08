@@ -1,7 +1,4 @@
 FROM ubuntu:16.04
-ENV http_proxy 'http://196.23.154.78:9400'
-ENV https_proxy 'http://196.23.154.78:9400'
-ENV no_proxy 'raphael,*.mrpg.net,*.agrista.net, 10.12.64.254'
 
 RUN apt-get update && apt-get install software-properties-common -y
 
@@ -34,7 +31,7 @@ RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true 
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 
-ADD sonar-scanner-msbuild-4.0.2.892 /Tools
+ADD sonar-scanner-msbuild-4.0.2.892.tar.gz /Tools
 
 
 
